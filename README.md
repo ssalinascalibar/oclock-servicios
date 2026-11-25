@@ -73,7 +73,7 @@ Estructura sencilla basada en componentes Astro.
 - `src/pages/`: páginas.
 - `src/components/`: componentes reutilizables.
 - `src/layouts/`: estructura general.
-- `src/styles/`: estilos globales.
+- `src/styles/`: estilos globales y archivos CSS independientes para cada componente.
 - `public/`: recursos estáticos.
 
 Las carpetas y componentes se crearán progresivamente según las necesidades del proyecto.
