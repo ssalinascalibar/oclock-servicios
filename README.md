@@ -49,70 +49,52 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 # Oclock Servicios
 
-Sitio web corporativo B2B desarrollado para presentar los servicios de Oclock mediante una landing page estática, profesional y responsive.
+Web corporativa B2B desarrollada mediante Astro para presentar los servicios de Oclock a través de una landing page estática, profesional y responsive.
 
 ## Objetivo
 
-Dar a conocer las líneas de negocio de la empresa, fortalecer su presencia digital y facilitar el contacto con potenciales clientes corporativos.
+Presentar las líneas de negocio de la empresa, fortalecer su presencia digital y facilitar el contacto con potenciales clientes corporativos.
 
-## Tecnologías
+## Stack tecnológico
 
 - Astro
 - HTML5
-- CSS3
+- CSS puro
+- Flexbox
+- CSS Grid
 - JavaScript
-- Bootstrap 5 (pendiente de instalación)
-- Node.js
-- npm
+- Node.js y npm
 - Git y GitHub
 
 ## Arquitectura
 
-El proyecto utiliza una estructura sencilla basada en componentes reutilizables de Astro.
+Estructura sencilla basada en componentes Astro.
 
-- `src/pages/`: páginas del sitio.
-- `src/components/`: componentes visuales.
+- `src/pages/`: páginas.
+- `src/components/`: componentes reutilizables.
 - `src/layouts/`: estructura general.
 - `src/styles/`: estilos globales.
 - `public/`: recursos estáticos.
 
-Las carpetas se crearán progresivamente según las necesidades del desarrollo.
+Las carpetas y componentes se crearán progresivamente según las necesidades del proyecto.
 
 ## Desarrollo local
 
-Instalar dependencias:
+| Comando | Descripción |
+|---|---|
+| `npm install` | Instalar dependencias |
+| `npm run dev` | Iniciar servidor de desarrollo |
+| `npm run build` | Compilar para producción |
+| `npm run preview` | Visualizar la compilación |
 
-```bash
-npm install
-```
+Servidor local: http://localhost:4321/
 
-Iniciar el servidor:
+## Producción
 
-```bash
-npm run dev
-```
-
-URL local: http://localhost:4321/
-
-## Compilación
-
-```bash
-npm run build
-```
-
-Los archivos de producción se generan en la carpeta `dist/`.
-
-Para visualizar la compilación:
-
-```bash
-npm run preview
-```
-
-## Alojamiento
-
-HostingPlus.
-
-El sitio se publicará como archivos estáticos y no requerirá un servidor Node.js en producción.
+- Hosting: HostingPlus.
+- Compilación estática.
+- Directorio de salida: `dist/`.
+- No requiere Node.js en producción.
 
 ## Referencia visual
 
@@ -126,7 +108,7 @@ https://github.com/ssalinascalibar/oclock-servicios
 
 Desarrollo incremental mediante VS Code, Codex y GitHub.
 
-Las instrucciones de desarrollo y restricciones del proyecto se encuentran en `AGENTS.md`.
+Las reglas e instrucciones de desarrollo se encuentran en `AGENTS.md`.
 
 ## Estado
 
