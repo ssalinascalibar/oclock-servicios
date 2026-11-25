@@ -1,59 +1,62 @@
 # AGENTS.md
 
-## 1. Contexto del proyecto
+## Contexto del proyecto
 
 - Proyecto: Oclock Servicios.
-- Sitio web corporativo B2B.
+- Web corporativa B2B.
 - Landing page estática con secciones para presentar los servicios de la empresa.
+- Diseño profesional, moderno, limpio y responsive.
 - Referencia visual: https://ug-transportation.com/
-- El diseño debe ser profesional, moderno, responsive y coherente con la identidad corporativa.
 
-## 2. Tecnologías
+## Tecnologías
 
-- Astro como framework principal.
+- Astro.
 - HTML semántico.
-- CSS puro y Bootstrap 5.
-- JavaScript puro para interacciones.
-- React únicamente con autorización del desarrollador.
+- CSS puro, Flexbox y CSS Grid.
+- JavaScript puro.
 - Node.js y npm para desarrollo y compilación.
+- Git y GitHub.
 - HostingPlus para alojamiento estático.
 
-No incorporar backend, bases de datos ni dependencias innecesarias.
+No utilizar Bootstrap, Tailwind, Sass ni otros frameworks CSS.
 
-## 3. Arquitectura
+No incorporar React, backend, bases de datos ni nuevas dependencias sin autorización.
 
-- Mantener una arquitectura sencilla basada en componentes Astro.
-- Utilizar `src/pages/index.astro` como página principal.
-- Utilizar `src/components/` para los componentes.
-- Utilizar `src/layouts/` para la estructura general.
-- Utilizar `src/styles/global.css` para estilos globales.
-- Evitar abstracciones, patrones y niveles de carpetas innecesarios.
-- Crear componentes y archivos solamente cuando exista una necesidad real.
-- No crear páginas adicionales sin autorización.
+## Arquitectura
 
-## 4. Código y buenas prácticas
+- Mantener una arquitectura simple basada en componentes Astro.
+- `src/pages/`: páginas.
+- `src/components/`: componentes.
+- `src/layouts/`: estructura general.
+- `src/styles/`: estilos globales.
+- `public/`: recursos estáticos.
+- Crear archivos y componentes únicamente cuando sean necesarios.
+- Evitar arquitecturas complejas, abstracciones y sobreingeniería.
+- Mantener `index.astro` como página principal.
 
-- Escribir código simple, limpio, legible y mantenible.
-- Utilizar nombres descriptivos en inglés para archivos, componentes, variables y funciones.
+## Código
+
+- Escribir código simple, legible y mantenible.
+- Utilizar nombres descriptivos en inglés.
 - Preferir funciones flecha cuando corresponda.
 - Utilizar comentarios breves en español cuando sean necesarios.
-- Evitar código duplicado, código muerto y sobreingeniería.
-- Mantener separadas las responsabilidades de cada componente.
+- Evitar código duplicado y código innecesario.
 - Priorizar las funcionalidades nativas de Astro.
+- Utilizar JavaScript únicamente cuando exista una necesidad de interactividad.
 
-## 5. CSS y diseño
+## CSS y diseño
 
-- Mantener los estilos simples y fáciles de modificar.
-- Utilizar variables CSS para colores y valores globales reutilizables.
-- Utilizar Bootstrap principalmente para grillas, distribución y diseño responsive.
-- Utilizar estilos locales de Astro cuando corresponda.
+- Utilizar CSS puro.
+- Priorizar Flexbox y CSS Grid.
+- Utilizar variables CSS para valores reutilizables.
+- Centralizar los estilos comunes en `src/styles/global.css`.
+- Mantener los estilos específicos dentro de cada componente Astro.
+- Utilizar media queries cuando corresponda.
+- Priorizar el enfoque mobile-first.
+- Evitar selectores complejos y estilos inline innecesarios.
 - No utilizar `!important`.
-- No utilizar estilos inline salvo casos justificados.
-- Evitar selectores innecesariamente complejos.
-- Priorizar un enfoque mobile-first.
-- Mantener consistencia visual entre todos los componentes.
 
-Paleta corporativa de referencia:
+### Paleta corporativa de referencia
 
 - Primario: #14263D
 - Acento: #2873B9
@@ -61,44 +64,41 @@ Paleta corporativa de referencia:
 - Blanco: #FFFFFF
 - Texto: #273441
 
-No modificar la paleta ni incorporar nuevos colores corporativos sin autorización.
+No modificar la identidad visual sin autorización.
 
-## 6. Contenido
+## Contenido
 
-- No inventar información sobre la empresa.
+- No inventar información.
 - No inventar servicios, clientes, estadísticas, testimonios, certificaciones ni datos de contacto.
-- Utilizar únicamente información proporcionada o aprobada por el desarrollador.
-- Consultar cuando falte información necesaria.
+- Utilizar exclusivamente información proporcionada o aprobada por el desarrollador.
+- Solicitar información cuando sea necesaria.
 - Mantener los contenidos en español de Chile.
-- Utilizar la web de referencia como inspiración, sin copiar sus contenidos ni identidad visual.
+- Utilizar la web de referencia como inspiración, sin copiar su contenido.
 
-## 7. SEO, accesibilidad y rendimiento
+## SEO, accesibilidad y rendimiento
 
-- Utilizar HTML semántico.
-- Mantener una jerarquía correcta de encabezados.
+- Utilizar HTML semántico y una jerarquía correcta de encabezados.
 - Optimizar imágenes y recursos.
-- Utilizar textos alternativos descriptivos.
-- Garantizar un contraste adecuado.
-- Evitar JavaScript innecesario.
-- Priorizar la velocidad de carga.
+- Incorporar textos alternativos descriptivos.
+- Mantener un contraste adecuado y navegación accesible.
+- Evitar JavaScript y dependencias innecesarias.
 
-## 8. Metodología de trabajo
+## Metodología de trabajo
 
 - Trabajar de manera incremental.
-- Ejecutar únicamente las tareas solicitadas.
-- Revisar los archivos relevantes antes de modificarlos.
-- No analizar todo el repositorio cuando no sea necesario.
-- No modificar componentes ajenos a la tarea.
-- No avanzar a otra etapa sin autorización.
-- No repetir código innecesariamente en las respuestas.
+- Ejecutar exclusivamente las tareas solicitadas.
+- Consultar únicamente los archivos relacionados con la tarea.
+- No modificar código ajeno a la solicitud.
+- No avanzar a otras etapas sin autorización.
 - Mantener respuestas breves y precisas.
+- No repetir código innecesariamente.
 - Informar los archivos modificados y las decisiones relevantes.
 
-## 9. Autorizaciones obligatorias
+## Autorizaciones obligatorias
 
 Solicitar autorización explícita antes de:
 
-- Cambiar la arquitectura del proyecto.
+- Modificar la arquitectura.
 - Instalar, eliminar o actualizar dependencias.
 - Modificar configuraciones críticas.
 - Eliminar archivos existentes.
@@ -107,15 +107,15 @@ Solicitar autorización explícita antes de:
 - Alterar funcionalidades previamente aprobadas.
 - Ejecutar comandos destructivos.
 - Realizar commits, push o cambios de ramas.
-- Publicar o desplegar el proyecto.
+- Publicar o desplegar el sitio.
 
-No asumir decisiones que corresponden al desarrollador.
+Ante cualquier cambio crítico o decisión no definida, consultar primero al desarrollador.
 
-## 10. Verificación
+## Verificación
 
-- Verificar que los cambios no introduzcan errores.
+- Verificar los cambios realizados.
 - Ejecutar `npm run build` cuando corresponda.
-- Informar errores y limitaciones sin ocultarlos.
-- No afirmar que una implementación funciona si no ha sido verificada.
+- Informar errores y limitaciones.
+- No afirmar que algo funciona sin haberlo verificado.
 
-Para consultar funcionalidades específicas de Astro, utilizar la documentación oficial: https://docs.astro.build/
+Documentación oficial de Astro: https://docs.astro.build/
