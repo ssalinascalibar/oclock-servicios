@@ -46,14 +46,18 @@ No incorporar React, backend, bases de datos ni nuevas dependencias sin autoriza
 
 ## CSS y diseño
 
-- Utilizar CSS puro.
+- Utilizar exclusivamente CSS puro.
 - Priorizar Flexbox y CSS Grid.
-- Utilizar variables CSS para valores reutilizables.
-- Centralizar los estilos comunes en `src/styles/global.css`.
-- Mantener los estilos específicos dentro de cada componente Astro.
-- Utilizar media queries cuando corresponda.
+- Mantener separados el HTML y el CSS.
+- Cada componente Astro debe tener su propio archivo CSS independiente dentro de `src/styles/`.
+- Importar el archivo CSS correspondiente desde el componente.
+- No utilizar bloques `<style>` dentro de los componentes Astro.
+- Centralizar las variables, el reset, la tipografía y los estilos compartidos en `global.css`.
+- Utilizar nombres de clases descriptivos y específicos de cada componente para evitar conflictos entre estilos.
+- Mantener las media queries específicas en el archivo CSS correspondiente.
 - Priorizar el enfoque mobile-first.
-- Evitar selectores complejos y estilos inline innecesarios.
+- Escribir CSS simple, legible y mantenible.
+- Evitar estilos inline y selectores innecesariamente complejos.
 - No utilizar `!important`.
 
 ### Paleta corporativa de referencia
