@@ -60,6 +60,22 @@ No incorporar React, backend, bases de datos ni nuevas dependencias sin autoriza
 - Evitar estilos inline y selectores innecesariamente complejos.
 - No utilizar `!important`.
 
+### Unidades y dimensiones CSS
+
+- Utilizar rem para márgenes, padding, gap y tamaños generales de fuente.
+- Utilizar em para iconos y elementos que deban escalar respecto a la tipografía del componente.
+- Utilizar porcentajes para dimensiones relativas al contenedor cuando corresponda.
+- Utilizar fr para la distribución de columnas mediante CSS Grid.
+- Utilizar px principalmente para bordes y detalles que requieran precisión.
+- Utilizar unidades de viewport cuando el diseño lo requiera.
+- Utilizar clamp() para tamaños fluidos cuando aporte valor al diseño responsive.
+- Utilizar line-height sin unidad.
+- Evitar dimensiones fijas innecesarias.
+- Priorizar max-width, min-height y dimensiones flexibles.
+- Respetar el tamaño de fuente raíz definido por el navegador.
+- No forzar el uso de una unidad cuando exista una alternativa más adecuada.
+- Mantener el CSS simple, consistente y legible.
+
 ### Paleta corporativa de referencia
 
 - Primario: #14263D
