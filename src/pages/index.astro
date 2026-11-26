@@ -21,7 +21,7 @@ import '../styles/global.css';
             <OurServices />
 
             {services.map((service, index) => (
-                <ServiceDetails {...service} reverse={index % 2 !== 0} />
+                <ServiceDetails {...service} serviceNumber={index + 1} reverse={index % 2 !== 0} />
             ))}
         </main>
     </body>
