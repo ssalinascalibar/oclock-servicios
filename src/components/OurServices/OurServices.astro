@@ -1,10 +1,64 @@
 ---
 import './our-services.css';
+
+// Descripciones provisionales: validar el contenido antes de publicar.
+const services = [
+    {
+        title: 'Mensajería y despachos express',
+        description: 'Servicios de mensajería y despachos express para empresas.',
+        href: '#mensajeria-y-despachos-express',
+    },
+    {
+        title: 'Fletes y despachos express',
+        description: 'Fletes y despachos express para el traslado de carga.',
+        href: '#fletes-y-despachos-express',
+    },
+    {
+        title: 'Transporte de pasajeros',
+        description: 'Traslado de pasajeros para las necesidades de movilidad de tu empresa.',
+        href: '#transporte-de-pasajeros',
+    },
+    {
+        title: 'Catering y producción de eventos',
+        description: 'Servicios de catering y producción de eventos corporativos.',
+        href: '#catering-y-produccion-de-eventos',
+    },
+];
 ---
 
-<section id="servicios" class="our-services">
+<section id="servicios" class="our-services" aria-labelledby="our-services-title">
     <div class="our-services-container">
-        <h2>Nuestros servicios</h2>
-        <p>Conoce nuestras soluciones para empresas.</p>
+        <header class="our-services-heading">
+            <h2 class="our-services-title" id="our-services-title">Nuestros servicios</h2>
+            <p class="our-services-intro">Conoce nuestras soluciones para empresas.</p>
+        </header>
+
+        <div class="our-services-grid">
+            {services.map((service) => (
+                <article class="our-services-card">
+                    {/* Espacio reservado hasta contar con una fotografía aprobada. */}
+                    <div class="our-services-image" aria-hidden="true">Fotografía pendiente</div>
+
+                    <div class="our-services-content">
+                        <h3 class="our-services-card-title">{service.title}</h3>
+                        <p class="our-services-description">{service.description}</p>
+
+                        <div class="our-services-footer">
+                            {/* Enlace pendiente: cambiar data-href por href cuando exista la sección y retirar aria-disabled y role. */}
+                            <a
+                                class="our-services-link"
+                                data-href={service.href}
+                                role="link"
+                                aria-disabled="true"
+                                aria-label={`Conocer más: ${service.title}`}
+                            >
+                                Conocer más
+                            </a>
+                            <p class="our-services-link-status">Más información próximamente</p>
+                        </div>
+                    </div>
+                </article>
+            ))}
+        </div>
     </div>
 </section>
