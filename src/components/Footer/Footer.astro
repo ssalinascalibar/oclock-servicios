@@ -1,0 +1,91 @@
+---
+import { services } from '../../data/services.js';
+import './footer.css';
+
+const currentYear = new Date().getFullYear();
+
+const navigationLinks = [
+    { label: 'Inicio', href: '#inicio' },
+    { label: 'Servicios', href: '#servicios' },
+    { label: 'Nosotros', href: '#nosotros' },
+    { label: 'Contacto', href: '#contacto' },
+];
+
+// Datos provisionales: reemplazar antes de publicar, junto con los datos de Contact.
+const contactDetails = [
+    {
+        label: 'Correo electrónico',
+        value: 'contacto@oclock.example',
+        iconPath: 'M3 5h18v14H3z M3 5l9 7 9-7',
+    },
+    {
+        label: 'Teléfono',
+        value: '+56 2 XXXX XXXX',
+        iconPath: 'M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 2a13 13 0 0 1-7-7l2-2-2-5Z',
+    },
+    {
+        label: 'WhatsApp',
+        value: '+56 9 XXXX XXXX',
+        iconPath: 'M21 4H3v13h4v4l5-4h9z M7 8h10 M7 12h7',
+    },
+    {
+        label: 'Ubicación',
+        value: 'Santiago, Chile.',
+        iconPath: 'M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z M15 10a3 3 0 1 1-6 0a3 3 0 0 1 6 0',
+    },
+];
+---
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-block">
+                <!-- Identificación temporal: pendiente incorporar el logotipo original para fondo oscuro. -->
+                <p class="footer-brand">Oclock Servicios</p>
+                <p class="footer-description">
+                    Soluciones integrales de mensajería, logística, transporte y producción de eventos para empresas.
+                </p>
+            </div>
+
+            <nav class="footer-block" aria-labelledby="footer-navigation-title">
+                <h2 class="footer-title" id="footer-navigation-title">Navegación</h2>
+                <ul class="footer-list" role="list">
+                    {navigationLinks.map((link) => (
+                        <li><a class="footer-link" href={link.href}>{link.label}</a></li>
+                    ))}
+                </ul>
+            </nav>
+
+            <nav class="footer-block" aria-labelledby="footer-services-title">
+                <h2 class="footer-title" id="footer-services-title">Nuestros servicios</h2>
+                <ul class="footer-list" role="list">
+                    {services.map((service) => (
+                        <li><a class="footer-link" href={`#${service.id}`}>{service.title}</a></li>
+                    ))}
+                </ul>
+            </nav>
+
+            <section class="footer-block" aria-labelledby="footer-contact-title">
+                <h2 class="footer-title" id="footer-contact-title">Contacto</h2>
+                <ul class="footer-list" role="list">
+                    {contactDetails.map((detail) => (
+                        <li class="footer-contact-item">
+                            <svg class="footer-contact-icon" viewBox="0 0 24 24" role="img" aria-label={detail.label} focusable="false">
+                                <path d={detail.iconPath} />
+                            </svg>
+                            <span>{detail.value}</span>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="footer-bottom">
+            <p>© {currentYear} Oclock Servicios. Todos los derechos reservados.</p>
+            <!-- Pendiente de vincular cuando se implemente la documentación legal. -->
+            <span class="footer-privacy">Política de privacidad</span>
+        </div>
+    </div>
+</footer>
