@@ -48,18 +48,10 @@
 }
 
 .our-services-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: none;
+    display: block;
+    width: 100%;
     aspect-ratio: 16 / 9;
-    margin: 1rem 1rem 0;
-    padding: 1rem;
-    background: var(--color-light);
-    color: var(--color-primary);
-    font-size: 0.875rem;
-    line-height: 1.5;
-    text-align: center;
+    object-fit: cover;
 }
 
 .our-services-content {

@@ -6,21 +6,25 @@ const services = [
     {
         title: 'Mensajería y despachos express',
         description: 'Servicios de mensajería y despachos express para empresas.',
+        image: '/images/our-services/mensajeria-despachos-express.webp',
         href: '#mensajeria-y-despachos-express',
     },
     {
         title: 'Fletes y despachos express',
         description: 'Fletes y despachos express para el traslado de carga.',
+        image: '/images/our-services/fletes-despachos-express.webp',
         href: '#fletes-y-despachos-express',
     },
     {
         title: 'Transporte de pasajeros',
         description: 'Traslado de pasajeros para las necesidades de movilidad de tu empresa.',
+        image: '/images/our-services/transporte-pasajeros.webp',
         href: '#transporte-de-pasajeros',
     },
     {
         title: 'Catering y producción de eventos',
         description: 'Servicios de catering y producción de eventos corporativos.',
+        image: '/images/our-services/catering-produccion-eventos.webp',
         href: '#catering-y-produccion-de-eventos',
     },
 ];
@@ -37,7 +41,7 @@ const services = [
             {services.map((service) => (
                 <article class="our-services-card">
                     {/* Espacio reservado hasta contar con una fotografía aprobada. */}
-                    <div class="our-services-image" aria-hidden="true">Fotografía pendiente</div>
+                    <img class="our-services-image" src={service.image} alt={service.title} width="1200" height="675" loading="lazy" />
 
                     <div class="our-services-content">
                         <h3 class="our-services-card-title">{service.title}</h3>
