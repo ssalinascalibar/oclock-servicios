@@ -3,11 +3,11 @@
    ============================== */
 
 :root {
-    --color-primary: #14263d;
+    --color-primary: #161616;
     --color-accent: #2873b9;
-    --color-light: #f2f5f8;
+    --color-light: #f4f4f4;
     --color-white: #ffffff;
-    --color-text: #273441;
+    --color-text: #333333;
 
     --font-family: 'Open Sans', sans-serif;
 }
