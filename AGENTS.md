@@ -137,6 +137,16 @@ Reutilizar las variables de `global.css`. No modificar la identidad visual sin a
 
 La ausencia de JavaScript en el navegador debe ser la condición predeterminada del proyecto.
 
+## React
+
+- Utilizar React únicamente para componentes con interactividad compleja o gestión de múltiples estados.
+- Priorizar Astro, HTML, CSS y JavaScript puro para funcionalidades sencillas.
+- Solicitar autorización antes de instalar React o desarrollar componentes con esta tecnología.
+- Integrar React mediante la arquitectura de islas de Astro.
+- Mantener los componentes React y sus estilos CSS en carpetas independientes por componente.
+- No convertir la landing page en una SPA.
+- Cargar JavaScript de React únicamente en los componentes que requieran interactividad.
+
 ## Contenido
 
 - No inventar información corporativa, servicios, clientes, estadísticas, testimonios, certificaciones ni datos de contacto.
