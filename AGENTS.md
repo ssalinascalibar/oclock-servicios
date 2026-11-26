@@ -18,7 +18,9 @@
 - Git y GitHub.
 - HostingPlus para alojamiento estático.
 
-No utilizar Bootstrap, Tailwind, Sass ni otros frameworks CSS. No incorporar React, backend, bases de datos ni nuevas dependencias sin autorización.
+No utilizar Bootstrap, Tailwind, Sass ni otros frameworks CSS.
+
+No incorporar React, backend, bases de datos ni nuevas dependencias sin autorización.
 
 ## Arquitectura
 
@@ -49,6 +51,7 @@ La navegación debe realizarse mediante anclas HTML dentro de la misma landing p
 - Utilizar comentarios breves en español cuando sean necesarios.
 - Evitar código duplicado, muerto o innecesario.
 - Priorizar las funcionalidades nativas de Astro.
+- No anticipar funcionalidades futuras.
 
 ## CSS
 
@@ -104,8 +107,6 @@ Utilizar únicamente los breakpoints necesarios para cada componente.
 
 ### Identidad visual
 
-Paleta corporativa:
-
 | Variable | Color |
 |---|---|
 | `--color-primary` | #14263D |
@@ -120,14 +121,25 @@ Reutilizar las variables de `global.css`. No modificar la identidad visual sin a
 
 ## JavaScript
 
-- Utilizar JavaScript puro únicamente cuando exista interactividad.
-- Mantener la lógica del navegador en archivos independientes.
+- Priorizar soluciones nativas de HTML y CSS antes de utilizar JavaScript.
+- Utilizar JavaScript puro exclusivamente cuando exista una necesidad real de interactividad.
+- Implementar únicamente la lógica necesaria para la funcionalidad solicitada.
+- Mantener la lógica del navegador en archivos independientes dentro de cada componente.
 - Permitir el frontmatter de Astro para importaciones, propiedades y generación de HTML.
 - Utilizar const por defecto y let cuando sea necesario.
 - Evitar variables globales.
-- Validar la existencia de elementos del DOM antes de utilizarlos.
-- Mantener la lógica sencilla y accesible.
+- Validar la existencia de elementos del DOM cuando corresponda.
+- Evitar abstracciones, funciones auxiliares y validaciones redundantes.
+- No anticipar funcionalidades ni escenarios futuros innecesarios.
+- No utilizar JavaScript para gestionar estilos, distribuciones responsive o comportamientos que puedan resolverse adecuadamente mediante HTML o CSS.
+- Utilizar anclas HTML para la navegación entre secciones.
+- Mantener las medidas esenciales de accesibilidad y navegación mediante teclado.
 - No crear archivos JavaScript vacíos o innecesarios.
+- No incorporar librerías ni frameworks sin autorización.
+
+La prioridad es mantener el menor código JavaScript necesario para conseguir un comportamiento correcto, accesible y fácil de mantener.
+
+Los componentes estáticos no deben contener JavaScript de navegador.
 
 ## Contenido
 
@@ -147,7 +159,7 @@ Reutilizar las variables de `global.css`. No modificar la identidad visual sin a
 - Mantener un contraste adecuado.
 - Garantizar la navegación mediante teclado.
 - Utilizar atributos ARIA cuando corresponda.
-- Evitar JavaScript y recursos innecesarios.
+- Evitar recursos y procesamiento innecesarios.
 - Priorizar la velocidad de carga.
 
 ## Metodología de trabajo
@@ -156,6 +168,7 @@ Reutilizar las variables de `global.css`. No modificar la identidad visual sin a
 - Consultar únicamente los archivos relevantes para cada tarea.
 - Respetar el código y las decisiones previamente aprobadas.
 - No modificar archivos ajenos a la solicitud.
+- No implementar funcionalidades que no hayan sido solicitadas.
 - No avanzar a otras etapas sin autorización.
 - Mantener respuestas breves y precisas.
 - No repetir código innecesariamente.
