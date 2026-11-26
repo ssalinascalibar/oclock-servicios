@@ -34,19 +34,29 @@ const { id, title, fullDescription, features, image, imageAlt, reverse = false }
         </div>
 
         <div class="service-details-content">
-            <h2 class="service-details-title" id={`${id}-title`}>{title}</h2>
+            <header class="service-details-heading">
+                <p class="service-details-intro">Servicios empresariales</p>
+                <h2 class="service-details-title" id={`${id}-title`}>{title}</h2>
+            </header>
             {fullDescription && (
                 <p class="service-details-description">{fullDescription}</p>
             )}
             {features.length > 0 && (
-                <ul class="service-details-features">
-                    {features.map((feature) => (
-                        <li>{feature}</li>
-                    ))}
-                </ul>
+                <div class="service-details-feature-group">
+                    <hr class="service-details-divider" />
+                    <h3 class="service-details-features-title">Características del servicio</h3>
+                    <ul class="service-details-features" role="list">
+                        {features.map((feature) => (
+                            <li class="service-details-feature">{feature}</li>
+                        ))}
+                    </ul>
+                </div>
             )}
             <!-- Destino pendiente de implementar: sección Contacto. -->
-            <a class="service-details-link" href="#contacto">Solicitar una cotización</a>
+            <a class="service-details-link" href="#contacto">
+                Solicitar una cotización
+                <span class="service-details-link-arrow" aria-hidden="true">→</span>
+            </a>
         </div>
     </div>
 </section>
