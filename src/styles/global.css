@@ -3,13 +3,13 @@
    ============================== */
 
 :root {
-  --color-primary: #14263d;
-  --color-accent: #2873b9;
-  --color-light: #f2f5f8;
-  --color-white: #ffffff;
-  --color-text: #273441;
+    --color-primary: #14263d;
+    --color-accent: #2873b9;
+    --color-light: #f2f5f8;
+    --color-white: #ffffff;
+    --color-text: #273441;
 
-  --font-family: 'Open Sans', sans-serif;
+    --font-family: 'Open Sans', sans-serif;
 }
 
 /* ==============================
@@ -17,9 +17,9 @@
    ============================== */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* ==============================
@@ -27,12 +27,12 @@
    ============================== */
 
 body {
-  font-family: var(--font-family);
-  color: var(--color-text);
-  background-color: var(--color-white);
+    font-family: var(--font-family);
+    color: var(--color-text);
+    background: var(--color-white);
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
