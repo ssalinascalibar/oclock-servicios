@@ -1,6 +1,6 @@
 # Oclock Servicios
 
-Web corporativa B2B desarrollada mediante Astro para presentar los servicios de Oclock a través de una landing page estática, profesional y responsive.
+Web corporativa B2B desarrollada con Astro para presentar los servicios de Oclock mediante una landing page estática, profesional y responsive.
 
 ## Objetivo
 
@@ -11,15 +11,19 @@ Presentar las líneas de negocio de la empresa, fortalecer su presencia digital 
 - Astro
 - HTML5
 - CSS puro
-- Flexbox
-- CSS Grid
-- JavaScript
+- Flexbox y CSS Grid
+- JavaScript puro
 - Node.js y npm
 - Git y GitHub
 
+## Requisitos
+
+- Node.js >= 22.23.4, según package.json.
+- npm.
+
 ## Arquitectura
 
-Estructura sencilla basada en carpetas por componente. Cada carpeta agrupa su archivo Astro, sus estilos CSS y su JavaScript de navegador cuando existe interactividad.
+El proyecto utiliza una arquitectura sencilla basada en carpetas por componente, manteniendo separados el HTML, CSS y JavaScript.
 
 ```text
 src/
@@ -37,17 +41,13 @@ src/
     └── global.css
 ```
 
-- `src/pages/`: páginas.
-- `src/components/`: carpetas de componentes con sus archivos Astro, CSS y JavaScript.
-- `src/styles/global.css`: variables, reset, tipografía y estilos compartidos.
-- `src/layouts/`: layouts, cuando sean necesarios.
-- `public/`: recursos estáticos.
+Cada componente contiene sus propios estilos y, cuando necesita interactividad, un archivo JavaScript independiente.
 
-Las carpetas de componentes y archivos Astro utilizan PascalCase; los archivos CSS y JavaScript utilizan kebab-case. Cada componente importa su CSS mediante una ruta relativa y carga su JavaScript con un `<script src="./nombre-del-componente.js"></script>` procesado por Astro. La lógica del navegador permanece en el archivo JavaScript independiente.
+Los estilos compartidos se centralizan en `src/styles/global.css`.
 
-Header contiene la lógica del menú móvil. Hero no necesita un archivo JavaScript.
+La navegación se realiza mediante anclas HTML dentro de la misma página.
 
-Las carpetas y componentes se crearán progresivamente según las necesidades del proyecto.
+Las carpetas y componentes se incorporarán progresivamente según las necesidades del proyecto.
 
 ## Desarrollo local
 
@@ -79,7 +79,7 @@ https://github.com/ssalinascalibar/oclock-servicios
 
 Desarrollo incremental mediante VS Code, Codex y GitHub.
 
-Las reglas e instrucciones de desarrollo se encuentran en `AGENTS.md`.
+Las convenciones de código, restricciones y reglas de desarrollo se encuentran en `AGENTS.md`.
 
 ## Estado
 
