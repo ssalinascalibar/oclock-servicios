@@ -109,11 +109,11 @@ Utilizar únicamente los breakpoints necesarios para cada componente.
 
 | Variable | Color |
 |---|---|
-| `--color-primary` | #14263D |
+| `--color-primary` | #161616 |
 | `--color-accent` | #2873B9 |
-| `--color-light` | #F2F5F8 |
+| `--color-light` | #F4F4F4 |
 | `--color-white` | #FFFFFF |
-| `--color-text` | #273441 |
+| `--color-text` | #333333 |
 
 Tipografía: Open Sans, sans-serif.
 

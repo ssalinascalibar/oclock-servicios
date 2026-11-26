@@ -1,0 +1,42 @@
+---
+import './service-details.css';
+
+interface Props {
+    id: string;
+    title: string;
+    description: string;
+    image: string;
+    imageAlt: string;
+    reverse?: boolean;
+}
+
+const { id, title, description, image, imageAlt, reverse = false } = Astro.props;
+---
+
+<section
+    id={id}
+    class:list={['service-details', { 'service-details-reverse': reverse }]}
+    aria-labelledby={`${id}-title`}
+>
+    <div class="service-details-container">
+        <div class="service-details-media">
+            <!-- Fotografía provisional reutilizada desde OurServices. -->
+            <img
+                class="service-details-image"
+                src={image}
+                alt={imageAlt}
+                width="1200"
+                height="675"
+                loading="lazy"
+                decoding="async"
+            />
+        </div>
+
+        <div class="service-details-content">
+            <h2 class="service-details-title" id={`${id}-title`}>{title}</h2>
+            <p class="service-details-description">{description}</p>
+            <!-- Destino pendiente de implementar: sección Contacto. -->
+            <a class="service-details-link" href="#contacto">Solicitar una cotización</a>
+        </div>
+    </div>
+</section>
