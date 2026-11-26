@@ -4,13 +4,14 @@ import './service-details.css';
 interface Props {
     id: string;
     title: string;
-    description: string;
+    fullDescription: string;
+    features: string[];
     image: string;
     imageAlt: string;
     reverse?: boolean;
 }
 
-const { id, title, description, image, imageAlt, reverse = false } = Astro.props;
+const { id, title, fullDescription, features, image, imageAlt, reverse = false } = Astro.props;
 ---
 
 <section
@@ -34,7 +35,16 @@ const { id, title, description, image, imageAlt, reverse = false } = Astro.props
 
         <div class="service-details-content">
             <h2 class="service-details-title" id={`${id}-title`}>{title}</h2>
-            <p class="service-details-description">{description}</p>
+            {fullDescription && (
+                <p class="service-details-description">{fullDescription}</p>
+            )}
+            {features.length > 0 && (
+                <ul class="service-details-features">
+                    {features.map((feature) => (
+                        <li>{feature}</li>
+                    ))}
+                </ul>
+            )}
             <!-- Destino pendiente de implementar: sección Contacto. -->
             <a class="service-details-link" href="#contacto">Solicitar una cotización</a>
         </div>
