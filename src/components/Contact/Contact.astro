@@ -1,0 +1,109 @@
+---
+import { services } from '../../data/services.js';
+import './contact.css';
+
+// Datos de contacto provisionales: reemplazar antes de publicar.
+const contactDetails = [
+    {
+        title: 'Correo electrónico',
+        value: 'contacto@oclock.example',
+        iconPath: 'M3 5h18v14H3z M3 5l9 7 9-7',
+    },
+    {
+        title: 'Teléfono',
+        value: '+56 2 XXXX XXXX',
+        iconPath: 'M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 2a13 13 0 0 1-7-7l2-2-2-5Z',
+    },
+    {
+        title: 'WhatsApp',
+        value: '+56 9 XXXX XXXX',
+        iconPath: 'M21 4H3v13h4v4l5-4h9z M7 8h10 M7 12h7',
+    },
+    {
+        title: 'Ubicación',
+        value: 'Santiago, Región Metropolitana, Chile.',
+        iconPath: 'M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z M15 10a3 3 0 1 1-6 0a3 3 0 0 1 6 0',
+    },
+];
+---
+
+<section class="contact" id="contacto" aria-labelledby="contact-title">
+    <div class="contact-container">
+        <div class="contact-information">
+            <header class="contact-heading">
+                <p class="contact-label">Contacto</p>
+                <h2 class="contact-title" id="contact-title">
+                    Conversemos sobre las necesidades de tu empresa.
+                </h2>
+                <p class="contact-description">
+                    Cuéntanos qué servicio necesitas y encontremos una solución adaptada a los requerimientos de tu organización.
+                </p>
+            </header>
+
+            <hr class="contact-divider" />
+
+            <ul class="contact-details" role="list">
+                {contactDetails.map((detail) => (
+                    <li class="contact-detail">
+                        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d={detail.iconPath} />
+                        </svg>
+                        <div class="contact-detail-content">
+                            <h3 class="contact-detail-title">{detail.title}</h3>
+                            <p class="contact-detail-value">{detail.value}</p>
+                        </div>
+                    </li>
+                ))}
+            </ul>
+        </div>
+
+        <!-- Formulario visual: sin controles de envío. Los cuatro inputs bloquean el envío implícito con Enter. -->
+        <form class="contact-form" aria-labelledby="contact-form-title">
+            <h3 class="contact-form-title" id="contact-form-title">Solicita una cotización</h3>
+
+            <div class="contact-fields">
+                <div class="contact-field">
+                    <label class="contact-field-label" for="contact-name">Nombre y apellido</label>
+                    <input class="contact-control" type="text" id="contact-name" name="fullName" autocomplete="name" />
+                </div>
+
+                <div class="contact-field">
+                    <label class="contact-field-label" for="contact-company">Empresa</label>
+                    <input class="contact-control" type="text" id="contact-company" name="company" autocomplete="organization" />
+                </div>
+
+                <div class="contact-field">
+                    <label class="contact-field-label" for="contact-email">Correo electrónico</label>
+                    <input class="contact-control" type="email" id="contact-email" name="email" autocomplete="email" />
+                </div>
+
+                <div class="contact-field">
+                    <label class="contact-field-label" for="contact-phone">Teléfono</label>
+                    <input class="contact-control" type="tel" id="contact-phone" name="phone" autocomplete="tel" />
+                </div>
+
+                <div class="contact-field contact-field-wide">
+                    <label class="contact-field-label" for="contact-service">Servicio de interés</label>
+                    <select class="contact-control" id="contact-service" name="service">
+                        <option value="" disabled selected>Selecciona un servicio</option>
+                        {services.map((service) => (
+                            <option value={service.id}>{service.title}</option>
+                        ))}
+                    </select>
+                </div>
+
+                <div class="contact-field contact-field-wide">
+                    <label class="contact-field-label" for="contact-message">Cuéntanos qué necesitas</label>
+                    <textarea class="contact-control contact-message" id="contact-message" name="message" rows="5"></textarea>
+                </div>
+            </div>
+
+            <button class="contact-button" type="button" disabled>
+                Enviar solicitud
+                <svg class="contact-button-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M5 12h14m-6-6 6 6-6 6" />
+                </svg>
+            </button>
+        </form>
+    </div>
+</section>
