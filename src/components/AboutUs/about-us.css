@@ -1,0 +1,146 @@
+.about-us {
+    width: 100%;
+    padding: 4rem 0;
+    background: var(--color-primary);
+    color: var(--color-light);
+}
+
+.about-us-container {
+    width: 90%;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.about-us-introduction {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-us-heading {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.about-us-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.about-us-label::before {
+    content: '';
+    flex: 0 0 2.5em;
+    border-top: 2px solid var(--color-accent);
+}
+
+.about-us-title {
+    color: var(--color-white);
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+.about-us-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    min-width: 0;
+    max-width: 42rem;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.about-us-divider {
+    width: 100%;
+    margin: 3rem 0;
+    border: 0;
+    border-top: 1px solid var(--color-white);
+    opacity: 0.15;
+}
+
+.about-us-pillars {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem 2rem;
+    list-style: none;
+}
+
+.about-us-pillar {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.about-us-icon {
+    display: block;
+    width: 2em;
+    height: 2em;
+    margin-bottom: 1.25rem;
+    color: var(--color-accent);
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.about-us-pillar-title {
+    margin-bottom: 0.75rem;
+    color: var(--color-white);
+    font-size: 1.125rem;
+    line-height: 1.4;
+}
+
+.about-us-pillar-description {
+    line-height: 1.7;
+}
+
+@media screen and (min-width: 768px) {
+    .about-us {
+        padding: 5rem 0;
+    }
+
+    .about-us-title {
+        font-size: 2.5rem;
+    }
+
+    .about-us-pillars {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .about-us {
+        padding: 6rem 0;
+    }
+
+    .about-us-introduction {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+
+    .about-us-heading,
+    .about-us-description {
+        flex: 1;
+    }
+
+    .about-us-title {
+        font-size: 3rem;
+    }
+
+    .about-us-divider {
+        margin: 4rem 0;
+    }
+
+    .about-us-pillars {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

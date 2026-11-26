@@ -1,0 +1,62 @@
+---
+import './about-us.css';
+
+const pillars = [
+    {
+        title: 'Soluciones integrales',
+        description: 'Cuatro líneas de negocio que permiten responder a distintas necesidades operativas, logísticas y corporativas.',
+        iconPath: 'M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z',
+    },
+    {
+        title: 'Personal calificado',
+        description: 'Personal calificado para realizar gestiones, trámites, despachos y operaciones de transporte de carga.',
+        iconPath: 'M14 7a4 4 0 1 1-8 0a4 4 0 0 1 8 0 M3 21v-2a7 7 0 0 1 12-5 M16 18l2 2l4-5',
+    },
+    {
+        title: 'Flexibilidad operativa',
+        description: 'Servicios adaptados a los requerimientos de cada cliente, desde gestiones individuales hasta eventos corporativos.',
+        iconPath: 'M3 6h18 M3 12h18 M3 18h18 M9 3v6 M16 9v6 M7 15v6',
+    },
+    {
+        title: 'Planificación y eficiencia',
+        description: 'Planificación de rutas y optimización de los traslados de colaboradores para eventos comerciales en distintos horarios.',
+        iconPath: 'M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0 M12 7v5l3 2',
+    },
+];
+---
+
+<section class="about-us" id="nosotros" aria-labelledby="about-us-title">
+    <div class="about-us-container">
+        <div class="about-us-introduction">
+            <header class="about-us-heading">
+                <p class="about-us-label">Sobre nosotros</p>
+                <h2 class="about-us-title" id="about-us-title">
+                    Un aliado estratégico para las operaciones de tu empresa.
+                </h2>
+            </header>
+
+            <div class="about-us-description">
+                <p>
+                    En Oclock Servicios integramos cuatro líneas de negocio para responder a las necesidades operativas de las empresas: mensajería y despachos express, fletes, transporte privado de pasajeros y catering y producción de eventos.
+                </p>
+                <p>
+                    Adaptamos nuestros servicios a los requerimientos de cada cliente, considerando las características de cada operación y sus necesidades particulares.
+                </p>
+            </div>
+        </div>
+
+        <hr class="about-us-divider" />
+
+        <ul class="about-us-pillars" role="list">
+            {pillars.map((pillar) => (
+                <li class="about-us-pillar">
+                    <svg class="about-us-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d={pillar.iconPath} />
+                    </svg>
+                    <h3 class="about-us-pillar-title">{pillar.title}</h3>
+                    <p class="about-us-pillar-description">{pillar.description}</p>
+                </li>
+            ))}
+        </ul>
+    </div>
+</section>
