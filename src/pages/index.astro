@@ -4,6 +4,7 @@ import Hero from '../components/Hero/Hero.astro';
 import OurServices from '../components/OurServices/OurServices.astro';
 import ServiceDetails from '../components/ServiceDetails/ServiceDetails.astro';
 import AboutUs from '../components/AboutUs/AboutUs.astro';
+import OurClients from '../components/OurClients/OurClients.astro';
 import { services } from '../data/services.js';
 import '../styles/global.css';
 ---
@@ -25,6 +26,7 @@ import '../styles/global.css';
                 <ServiceDetails {...service} serviceNumber={index + 1} reverse={index % 2 !== 0} />
             ))}
             <AboutUs />
+            <OurClients />
         </main>
     </body>
 </html>

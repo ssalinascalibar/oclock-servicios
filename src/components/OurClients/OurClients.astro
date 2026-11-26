@@ -1,0 +1,22 @@
+---
+import { clients } from '../../data/clients.js';
+import './our-clients.css';
+---
+
+<section class="our-clients" aria-labelledby="our-clients-title">
+    <div class="our-clients-container">
+        <header class="our-clients-heading">
+            <p class="our-clients-label">Nuestra experiencia</p>
+            <h2 class="our-clients-title" id="our-clients-title">Empresas en las que hemos operado</h2>
+            <p class="our-clients-description">Soluciones empresariales para organizaciones de distintos sectores.</p>
+        </header>
+
+        <hr class="our-clients-divider" />
+
+        <ul class="our-clients-grid" role="list">
+            {clients.map((client) => (
+                <li class="our-clients-name">{client}</li>
+            ))}
+        </ul>
+    </div>
+</section>

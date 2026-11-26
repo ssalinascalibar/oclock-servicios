@@ -1,0 +1,110 @@
+.our-clients {
+    width: 100%;
+    padding: 4rem 0;
+    background: var(--color-white);
+    color: var(--color-text);
+}
+
+.our-clients-container {
+    width: 90%;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.our-clients-heading {
+    text-align: center;
+}
+
+.our-clients-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    color: var(--color-accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.our-clients-label::before {
+    content: '';
+    flex: 0 0 2.5em;
+    border-top: 2px solid var(--color-accent);
+}
+
+.our-clients-title {
+    color: var(--color-primary);
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+.our-clients-description {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+.our-clients-divider {
+    width: 100%;
+    margin: 2.5rem 0 1.5rem;
+    border: 0;
+    border-top: 1px solid var(--color-text);
+    opacity: 0.15;
+}
+
+.our-clients-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 1.5rem;
+    list-style: none;
+}
+
+.our-clients-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 0.625rem 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+@media screen and (min-width: 768px) {
+    .our-clients {
+        padding: 5rem 0;
+    }
+
+    .our-clients-title {
+        font-size: 2.5rem;
+    }
+
+    .our-clients-divider {
+        margin-top: 3rem;
+    }
+
+    .our-clients-grid {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 2rem;
+    }
+
+    .our-clients-name {
+        font-size: 1.125rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .our-clients {
+        padding: 6rem 0;
+    }
+
+    .our-clients-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
