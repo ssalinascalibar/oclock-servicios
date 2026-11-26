@@ -4,7 +4,7 @@
 
 - Proyecto: Oclock Servicios.
 - Web corporativa B2B.
-- Landing page estática con secciones para presentar los servicios de la empresa.
+- Landing page estática de una sola página, organizada en secciones.
 - Diseño profesional, moderno, limpio y responsive.
 - Referencia visual: https://ug-transportation.com/
 
@@ -18,199 +18,170 @@
 - Git y GitHub.
 - HostingPlus para alojamiento estático.
 
-No utilizar Bootstrap, Tailwind, Sass ni otros frameworks CSS.
-
-No incorporar React, backend, bases de datos ni nuevas dependencias sin autorización.
+No utilizar Bootstrap, Tailwind, Sass ni otros frameworks CSS. No incorporar React, backend, bases de datos ni nuevas dependencias sin autorización.
 
 ## Arquitectura
 
-- Mantener una arquitectura sencilla basada en componentes Astro.
-- Organizar los componentes en carpetas independientes dentro de `src/components/`.
-- Agrupar dentro de cada carpeta el archivo Astro, CSS y JavaScript correspondiente.
+- Mantener una arquitectura simple basada en componentes Astro.
+- Organizar cada componente en su propia carpeta dentro de `src/components/`.
+- Agrupar los archivos Astro, CSS y JavaScript correspondientes dentro de cada carpeta.
 - Mantener separados el HTML, CSS y JavaScript.
-- Utilizar PascalCase para las carpetas de componentes y archivos Astro.
-- Utilizar kebab-case para los archivos CSS y JavaScript.
-- Importar los estilos y scripts desde el componente correspondiente.
-- Crear archivos JavaScript únicamente cuando sean necesarios.
-- Mantener la lógica JavaScript del navegador en archivos independientes dentro de la carpeta del componente y cargarlos mediante un `<script src="./nombre-del-componente.js"></script>` procesado por Astro.
+- Importar el CSS desde el componente correspondiente.
+- Cargar los scripts mediante `<script src="./nombre-del-componente.js"></script>`.
 - Mantener los estilos globales en `src/styles/global.css`.
-- Utilizar `src/pages/` para las páginas.
-- Utilizar `src/layouts/` para los layouts.
-- Utilizar `public/` para los recursos estáticos.
-- Mantener `index.astro` como página principal de la landing.
-- Crear carpetas y archivos únicamente cuando exista una necesidad real.
-- Evitar arquitecturas complejas, abstracciones y sobreingeniería.
+- Utilizar `src/pages/index.astro` como página principal.
+- Utilizar `src/layouts/` para layouts cuando sean necesarios.
+- Utilizar `public/` para recursos estáticos.
+- Crear archivos y carpetas únicamente cuando sean necesarios.
+- Evitar abstracciones y sobreingeniería.
 
-## Código y buenas prácticas
+La navegación debe realizarse mediante anclas HTML dentro de la misma landing page. No crear páginas adicionales sin autorización.
+
+## Convenciones de código
 
 - Escribir código simple, legible y mantenible.
 - Utilizar una indentación de 4 espacios.
 - Utilizar nombres descriptivos en inglés.
+- Utilizar PascalCase para componentes y sus carpetas.
+- Utilizar kebab-case para archivos CSS, JavaScript y clases CSS.
+- Utilizar camelCase para variables y funciones JavaScript.
 - Preferir funciones flecha cuando corresponda.
 - Utilizar comentarios breves en español cuando sean necesarios.
 - Evitar código duplicado, muerto o innecesario.
 - Priorizar las funcionalidades nativas de Astro.
-- Utilizar JavaScript únicamente cuando exista una necesidad real de interactividad.
 
-## CSS y diseño
+## CSS
 
-### Organización de estilos
+### Organización y sintaxis
 
-- Utilizar exclusivamente CSS puro.
-- Mantener separados el HTML y el CSS.
-- Cada componente Astro debe tener su propio archivo CSS independiente dentro de su carpeta en `src/components/`, junto al archivo Astro.
-- Importar el archivo CSS correspondiente desde cada componente.
-- No utilizar bloques `<style>` dentro de los componentes Astro.
-- No utilizar estilos inline.
-- Centralizar variables, reset, tipografía y estilos compartidos en `src/styles/global.css`.
-- Mantener los estilos específicos en el archivo correspondiente a cada componente.
-
-### Convenciones CSS
-
-- Utilizar una indentación de 4 espacios.
-- Utilizar nombres de clases descriptivos en inglés y formato kebab-case.
-- Utilizar nombres simples como `.hero-title`, `.hero-content` y `.hero-button`.
-- No utilizar la metodología BEM.
+- Utilizar archivos CSS independientes.
+- Centralizar variables, reset, tipografía y estilos compartidos en `global.css`.
+- No utilizar bloques `<style>` ni estilos inline.
 - Priorizar clases sobre identificadores para aplicar estilos.
-- Reservar los identificadores principalmente para navegación y enlaces internos.
-- Utilizar propiedades CSS tradicionales cuando sean suficientes.
-- Preferir margin, padding, width, height y sus propiedades tradicionales frente a alternativas lógicas innecesarias.
+- Reservar los identificadores principalmente para navegación y elementos únicos.
+- Utilizar clases descriptivas y específicas del componente, como `.hero-title` y `.header-menu`.
+- No utilizar la metodología BEM.
+- Preferir propiedades tradicionales frente a propiedades lógicas innecesarias.
 - Mantener una línea en blanco entre bloques de selectores.
-- Evitar selectores excesivamente complejos.
-- Evitar propiedades y estilos duplicados.
+- Evitar selectores complejos y especificidad innecesaria.
 - No utilizar `!important`.
 
 ### Shorthand
 
-- Priorizar propiedades shorthand cuando mejoren la legibilidad.
-- Utilizar shorthand para margin, padding, border, background y flex cuando corresponda.
+- Priorizar shorthand para margin, padding, border, background y flex cuando simplifique el código.
 - Utilizar la menor cantidad de valores necesarios.
-- Utilizar propiedades individuales cuando solo sea necesario modificar un valor específico.
+- Utilizar propiedades individuales cuando solo cambie un valor específico.
 - Evitar shorthand cuando pueda sobrescribir otras propiedades involuntariamente.
 
-### Unidades y dimensiones CSS
+### Unidades y dimensiones
 
-- Utilizar rem para márgenes, padding y gap.
-- Utilizar rem para tamaños generales de fuente.
-- Utilizar em para iconos y textos que deban escalar respecto a su componente.
-- Utilizar porcentajes para dimensiones relativas al contenedor.
-- Utilizar vh, svh y vw cuando el diseño lo requiera.
-- Utilizar fr para distribuciones mediante CSS Grid.
-- Utilizar px para bordes, detalles visuales y dimensiones que requieran precisión.
-- Utilizar siempre px para los breakpoints de las media queries.
+- `rem`: márgenes, padding, gap y tamaños generales de fuente.
+- `em`: iconos y textos relativos a la tipografía del componente.
+- `%`: unidad preferente para width, max-width y dimensiones relativas al contenedor.
+- `px`: breakpoints, bordes y dimensiones que requieran precisión.
+- `vh`, `svh` y `vw`: dimensiones relativas al viewport cuando corresponda.
+- `fr`: distribución mediante CSS Grid.
 - Utilizar line-height sin unidad.
-- Priorizar dimensiones flexibles, max-width y min-height.
-- Evitar dimensiones fijas innecesarias.
-- Evitar funciones como clamp(), calc(), min() y max() cuando exista una solución más sencilla.
-- Respetar el tamaño de fuente raíz definido por el navegador.
-- No forzar el uso de una unidad cuando exista una alternativa más adecuada.
-- Priorizar porcentajes (%) para width, max-width y dimensiones relativas al contenedor.
-- Utilizar rem principalmente para márgenes, padding, gap y tamaños generales de fuente.
-- No utilizar unidades ch, ex, cap, ic, lh ni rlh.
+- Priorizar dimensiones flexibles.
 - Utilizar dimensiones fijas únicamente cuando sean necesarias.
+- No utilizar unidades ch, ex, cap, ic, lh ni rlh.
+- Evitar clamp(), calc(), min() y max() cuando exista una solución convencional más sencilla.
+- Respetar el tamaño de fuente raíz del navegador.
 
-### Distribución y responsive
+### Responsive
 
-- Priorizar Flexbox para distribuciones unidimensionales.
-- Utilizar CSS Grid para distribuciones de filas y columnas.
-- Trabajar con un enfoque mobile-first.
-- Definir primero los estilos base para dispositivos móviles.
+- Priorizar Flexbox para distribuciones unidimensionales y Grid para filas y columnas.
+- Trabajar con enfoque mobile-first.
 - Mantener las media queries al final de cada archivo CSS.
+- Utilizar siempre breakpoints en píxeles.
 - Ordenar los breakpoints de menor a mayor.
 - Utilizar la sintaxis `@media screen and (min-width: 768px)`.
 - Sobrescribir únicamente las propiedades que necesiten cambiar.
-- No repetir propiedades ya declaradas en los estilos base.
-- No crear breakpoints innecesarios.
 
-Breakpoints de referencia:
+Breakpoints de referencia: 576px, 768px, 992px, 1200px y 1440px.
 
-- 576px: móviles grandes.
-- 768px: tablets.
-- 992px: portátiles.
-- 1200px: escritorio.
-- 1440px: pantallas grandes.
+Utilizar únicamente los breakpoints necesarios para cada componente.
 
-Utilizar únicamente los breakpoints que requiera cada componente.
+### Identidad visual
 
-### Paleta corporativa de referencia
+Paleta corporativa:
 
-- Primario: #14263D
-- Acento: #2873B9
-- Fondo secundario: #F2F5F8
-- Blanco: #FFFFFF
-- Texto: #273441
+| Variable | Color |
+|---|---|
+| `--color-primary` | #14263D |
+| `--color-accent` | #2873B9 |
+| `--color-light` | #F2F5F8 |
+| `--color-white` | #FFFFFF |
+| `--color-text` | #273441 |
 
-Utilizar las variables existentes en `global.css`.
+Tipografía: Open Sans, sans-serif.
 
-No modificar la paleta ni la identidad visual sin autorización.
+Reutilizar las variables de `global.css`. No modificar la identidad visual sin autorización.
 
-### Criterio general de CSS
+## JavaScript
 
-Priorizar CSS tradicional, sencillo, consistente y fácil de mantener.
-
-No utilizar técnicas avanzadas únicamente por modernizar o sofisticar el código. Mantener la consistencia con las convenciones establecidas.
+- Utilizar JavaScript puro únicamente cuando exista interactividad.
+- Mantener la lógica del navegador en archivos independientes.
+- Permitir el frontmatter de Astro para importaciones, propiedades y generación de HTML.
+- Utilizar const por defecto y let cuando sea necesario.
+- Evitar variables globales.
+- Validar la existencia de elementos del DOM antes de utilizarlos.
+- Mantener la lógica sencilla y accesible.
+- No crear archivos JavaScript vacíos o innecesarios.
 
 ## Contenido
 
-- No inventar información.
-- No inventar servicios, clientes, estadísticas, testimonios, certificaciones ni datos de contacto.
-- No inventar rutas de archivos, imágenes o recursos inexistentes.
-- Utilizar exclusivamente información proporcionada o aprobada por el desarrollador.
-- Identificar claramente los contenidos provisionales.
+- No inventar información corporativa, servicios, clientes, estadísticas, testimonios, certificaciones ni datos de contacto.
+- No inventar rutas de archivos o recursos inexistentes.
+- Utilizar únicamente información proporcionada o aprobada por el desarrollador.
+- Identificar los contenidos provisionales.
 - Solicitar información cuando sea necesaria.
 - Mantener los contenidos en español de Chile.
 - Utilizar la web de referencia como inspiración, sin copiar sus contenidos ni identidad corporativa.
 
 ## SEO, accesibilidad y rendimiento
 
-- Utilizar HTML semántico.
-- Mantener una jerarquía correcta de encabezados.
+- Utilizar HTML semántico y una jerarquía correcta de encabezados.
 - Optimizar imágenes y recursos.
-- Incorporar textos alternativos descriptivos.
+- Utilizar textos alternativos descriptivos.
 - Mantener un contraste adecuado.
-- Garantizar una navegación accesible mediante teclado.
-- Evitar JavaScript y dependencias innecesarias.
+- Garantizar la navegación mediante teclado.
+- Utilizar atributos ARIA cuando corresponda.
+- Evitar JavaScript y recursos innecesarios.
 - Priorizar la velocidad de carga.
 
 ## Metodología de trabajo
 
-- Trabajar de manera incremental.
-- Ejecutar exclusivamente las tareas solicitadas.
-- Revisar los archivos relevantes antes de modificarlos.
-- Consultar únicamente los archivos relacionados con la tarea.
-- No analizar todo el repositorio innecesariamente.
-- No modificar código ajeno a la solicitud.
-- Respetar el código previamente aprobado.
+- Trabajar de manera incremental y dentro del alcance solicitado.
+- Consultar únicamente los archivos relevantes para cada tarea.
+- Respetar el código y las decisiones previamente aprobadas.
+- No modificar archivos ajenos a la solicitud.
 - No avanzar a otras etapas sin autorización.
 - Mantener respuestas breves y precisas.
-- No repetir código innecesariamente en las respuestas.
-- Informar los archivos creados, modificados o eliminados.
-- Informar las decisiones técnicas relevantes.
+- No repetir código innecesariamente.
+- Informar los archivos modificados y las decisiones relevantes.
 
 ## Autorizaciones obligatorias
 
 Solicitar autorización explícita antes de:
 
-- Modificar la arquitectura.
+- Modificar la arquitectura o configuraciones críticas.
 - Instalar, eliminar o actualizar dependencias.
-- Modificar configuraciones críticas.
-- Modificar los estilos globales fuera del alcance solicitado.
 - Eliminar archivos existentes.
 - Realizar refactorizaciones generales.
-- Cambiar la identidad visual.
-- Alterar funcionalidades previamente aprobadas.
+- Modificar estilos globales fuera del alcance solicitado.
+- Cambiar la identidad visual o funcionalidades aprobadas.
 - Ejecutar comandos destructivos.
 - Realizar commits, push o cambios de ramas.
 - Publicar o desplegar el sitio.
 
-Ante cualquier cambio crítico o decisión no definida, consultar primero al desarrollador.
+Ante decisiones críticas no definidas, consultar primero al desarrollador.
 
 ## Verificación
 
 - Verificar los cambios realizados.
 - Ejecutar `npm run build` cuando corresponda.
 - Informar errores y limitaciones.
-- No ocultar problemas detectados.
-- No afirmar que algo funciona sin haberlo verificado.
+- No afirmar que una implementación funciona sin haberla verificado.
 
-Documentación oficial de Astro: https://docs.astro.build/
+Documentación oficial: https://docs.astro.build/
