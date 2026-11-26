@@ -24,14 +24,21 @@ No incorporar React, backend, bases de datos ni nuevas dependencias sin autoriza
 
 ## Arquitectura
 
-- Mantener una arquitectura simple basada en componentes Astro.
-- `src/pages/`: páginas.
-- `src/components/`: componentes.
-- `src/layouts/`: estructura general.
-- `src/styles/`: estilos globales e independientes.
-- `public/`: recursos estáticos.
-- Mantener `index.astro` como página principal.
-- Crear archivos, carpetas y componentes únicamente cuando sean necesarios.
+- Mantener una arquitectura sencilla basada en componentes Astro.
+- Organizar los componentes en carpetas independientes dentro de `src/components/`.
+- Agrupar dentro de cada carpeta el archivo Astro, CSS y JavaScript correspondiente.
+- Mantener separados el HTML, CSS y JavaScript.
+- Utilizar PascalCase para las carpetas de componentes y archivos Astro.
+- Utilizar kebab-case para los archivos CSS y JavaScript.
+- Importar los estilos y scripts desde el componente correspondiente.
+- Crear archivos JavaScript únicamente cuando sean necesarios.
+- Mantener la lógica JavaScript del navegador en archivos independientes dentro de la carpeta del componente y cargarlos mediante un `<script src="./nombre-del-componente.js"></script>` procesado por Astro.
+- Mantener los estilos globales en `src/styles/global.css`.
+- Utilizar `src/pages/` para las páginas.
+- Utilizar `src/layouts/` para los layouts.
+- Utilizar `public/` para los recursos estáticos.
+- Mantener `index.astro` como página principal de la landing.
+- Crear carpetas y archivos únicamente cuando exista una necesidad real.
 - Evitar arquitecturas complejas, abstracciones y sobreingeniería.
 
 ## Código y buenas prácticas
@@ -51,11 +58,11 @@ No incorporar React, backend, bases de datos ni nuevas dependencias sin autoriza
 
 - Utilizar exclusivamente CSS puro.
 - Mantener separados el HTML y el CSS.
-- Cada componente Astro debe tener su propio archivo CSS independiente dentro de `src/styles/`.
+- Cada componente Astro debe tener su propio archivo CSS independiente dentro de su carpeta en `src/components/`, junto al archivo Astro.
 - Importar el archivo CSS correspondiente desde cada componente.
 - No utilizar bloques `<style>` dentro de los componentes Astro.
 - No utilizar estilos inline.
-- Centralizar variables, reset, tipografía y estilos compartidos en `global.css`.
+- Centralizar variables, reset, tipografía y estilos compartidos en `src/styles/global.css`.
 - Mantener los estilos específicos en el archivo correspondiente a cada componente.
 
 ### Convenciones CSS
