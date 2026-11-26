@@ -121,25 +121,21 @@ Reutilizar las variables de `global.css`. No modificar la identidad visual sin a
 
 ## JavaScript
 
-- Priorizar soluciones nativas de HTML y CSS antes de utilizar JavaScript.
-- Utilizar JavaScript puro exclusivamente cuando exista una necesidad real de interactividad.
-- Implementar únicamente la lógica necesaria para la funcionalidad solicitada.
-- Mantener la lógica del navegador en archivos independientes dentro de cada componente.
-- Permitir el frontmatter de Astro para importaciones, propiedades y generación de HTML.
-- Utilizar const por defecto y let cuando sea necesario.
-- Evitar variables globales.
-- Validar la existencia de elementos del DOM cuando corresponda.
-- Evitar abstracciones, funciones auxiliares y validaciones redundantes.
-- No anticipar funcionalidades ni escenarios futuros innecesarios.
-- No utilizar JavaScript para gestionar estilos, distribuciones responsive o comportamientos que puedan resolverse adecuadamente mediante HTML o CSS.
-- Utilizar anclas HTML para la navegación entre secciones.
-- Mantener las medidas esenciales de accesibilidad y navegación mediante teclado.
-- No crear archivos JavaScript vacíos o innecesarios.
-- No incorporar librerías ni frameworks sin autorización.
+- No utilizar JavaScript mientras no sea estrictamente necesario.
+- Priorizar siempre HTML y CSS nativos.
+- Los componentes estáticos no deben utilizar JavaScript de navegador.
+- No crear scripts para funcionalidades futuras o no solicitadas.
+- Solicitar autorización antes de incorporar nuevas funcionalidades JavaScript.
+- Mantener los archivos JavaScript independientes dentro de la carpeta del componente correspondiente.
+- Implementar únicamente la lógica indispensable para resolver la funcionalidad autorizada.
+- Preferir funciones flecha, const y let cuando corresponda.
+- Evitar abstracciones, validaciones redundantes y complejidad innecesaria.
+- Mantener la accesibilidad y el correcto funcionamiento.
+- No utilizar JavaScript para navegación por anclas, estilos o distribuciones responsive que puedan resolverse mediante HTML y CSS.
+- Permitir el frontmatter de Astro para importaciones y generación de HTML.
+- No incorporar librerías ni frameworks JavaScript sin autorización.
 
-La prioridad es mantener el menor código JavaScript necesario para conseguir un comportamiento correcto, accesible y fácil de mantener.
-
-Los componentes estáticos no deben contener JavaScript de navegador.
+La ausencia de JavaScript en el navegador debe ser la condición predeterminada del proyecto.
 
 ## Contenido
 
