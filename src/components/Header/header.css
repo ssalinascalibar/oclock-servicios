@@ -52,15 +52,20 @@
     background: currentColor;
 }
 
-.header-toggle[hidden],
-.header-nav[hidden] {
+.header-toggle[hidden] {
     display: none;
 }
 
 .header-nav {
+    display: none;
     width: 100%;
     padding-top: 1rem;
     border-top: 1px solid var(--color-light);
+}
+
+.header-toggle[hidden] + .header-nav,
+.header-toggle[aria-expanded="true"] + .header-nav {
+    display: block;
 }
 
 .header-menu {
@@ -108,7 +113,12 @@
 }
 
 @media screen and (min-width: 768px) {
+    .header-toggle {
+        display: none;
+    }
+
     .header-nav {
+        display: block;
         width: auto;
         margin-left: auto;
         padding-top: 0;
