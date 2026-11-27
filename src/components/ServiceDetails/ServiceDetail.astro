@@ -3,6 +3,7 @@ import './service-details.css';
 
 interface Props {
     id: string;
+    label: string;
     title: string;
     fullDescription: string;
     features: {
@@ -21,6 +22,7 @@ interface Props {
 
 const {
     id,
+    label,
     title,
     fullDescription,
     features,
@@ -54,7 +56,7 @@ const {
             <header class="service-details-heading">
                 <p class="service-details-intro">
                     <span class="service-details-number">{String(serviceNumber).padStart(2, '0')}</span>
-                    <span>Servicios empresariales</span>
+                    <span>{label}</span>
                 </p>
                 <h2 class="service-details-title" id={`${id}-title`}>{title}</h2>
             </header>

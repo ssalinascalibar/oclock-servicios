@@ -1,6 +1,7 @@
 export const services = [
     {
         id: 'mensajeria-y-despachos-express',
+        label: 'Mensajería corporativa',
         title: 'Mensajería y despachos express',
         description: 'Servicios de mensajería, trámites y despachos express para empresas.',
         fullDescription: 'Nuestro servicio de mensajería y despachos express está orientado a resolver las necesidades operativas y administrativas de las empresas. Contamos con personal calificado que realiza gestiones, trámites y entregas en motocicleta, facilitando las actividades diarias de nuestros clientes y el traslado de productos y documentación.',
@@ -39,6 +40,7 @@ export const services = [
     },
     {
         id: 'fletes-y-despachos-express',
+        label: 'Logística y distribución',
         title: 'Fletes y despachos express',
         description: 'Soluciones de transporte de carga, productos, mobiliario e insumos para empresas.',
         fullDescription: 'Ofrecemos servicios de fletes y despachos express mediante camionetas de carga tipo Mercedes-Benz Vito, operadas por personal calificado. Nuestro servicio se adapta a los requerimientos de cada empresa, considerando las dimensiones de la carga, las distancias y las necesidades particulares de cada traslado.',
@@ -73,6 +75,7 @@ export const services = [
     },
     {
         id: 'transporte-de-pasajeros',
+        label: 'Movilidad empresarial',
         title: 'Transporte de pasajeros',
         description: 'Transporte privado de ejecutivos y colaboradores, adaptado a las necesidades de cada empresa.',
         fullDescription: 'Brindamos servicios de transporte privado de pasajeros mediante vehículos y vans, seleccionados de acuerdo con los requerimientos del cliente y la cantidad de personas que necesitan trasladarse. Somos especialistas en el transporte de colaboradores para eventos comerciales en distintos horarios, incorporando la planificación de rutas para optimizar los desplazamientos.',
@@ -102,6 +105,7 @@ export const services = [
     },
     {
         id: 'catering-y-produccion-de-eventos',
+        label: 'Experiencias corporativas',
         title: 'Catering y producción de eventos',
         description: 'Servicios de alimentación y producción de eventos adaptados a las necesidades de tu empresa.',
         fullDescription: 'Ofrecemos soluciones flexibles de catering y producción de eventos para empresas, adaptándonos a las características y requerimientos de cada actividad. Nuestros servicios contemplan desde la alimentación para reuniones y jornadas laborales hasta la realización de grandes eventos y celebraciones corporativas.',
