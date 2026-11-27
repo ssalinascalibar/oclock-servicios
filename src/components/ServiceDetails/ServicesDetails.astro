@@ -1,8 +1,0 @@
----
-import ServiceDetails from './ServiceDetails.astro';
-import { services } from '../../data/services.js';
----
-
-{services.map((service, index) => (
-    <ServiceDetails {...service} serviceNumber={index + 1} reverse={index % 2 !== 0} />
-))}
