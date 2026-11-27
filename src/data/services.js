@@ -4,7 +4,7 @@ export const services = [
         label: 'LOGÍSTICA URBANA Y MENSAJERÍA',
         title: 'Mensajería',
         description: 'Envíos ágiles, trámites y gestiones corporativas con seguimiento oportuno.',
-        fullDescription: 'Nuestro servicio de mensajería y despachos express está orientado a resolver las necesidades operativas y administrativas de las empresas. Contamos con personal calificado que realiza gestiones, trámites y entregas en motocicleta, facilitando las actividades diarias de nuestros clientes y el traslado de productos y documentación.',
+        fullDescription: 'Optimiza la gestión de tus envíos y trámites administrativos con nuestro servicio express. Contamos con personal calificado que garantiza puntualidad y seguridad, liberando tus recursos internos para que te concentres en tu negocio.',
         features: [
             {
                 title: 'Gestiones administrativas',
@@ -40,10 +40,10 @@ export const services = [
     },
     {
         id: 'transporte-de-pasajeros',
-        label: 'Movilidad empresarial',
+        label: 'Movilidad corporativa y traslados',
         title: 'Transporte de pasajeros',
         description: 'Traslados privados para colaboradores y ejecutivos, incluyendo rutas y acercamientos habituales.',
-        fullDescription: 'Brindamos servicios de transporte privado de pasajeros mediante vehículos y vans, seleccionados de acuerdo con los requerimientos del cliente y la cantidad de personas que necesitan trasladarse. Somos especialistas en el transporte de colaboradores para eventos comerciales en distintos horarios, incorporando la planificación de rutas para optimizar los desplazamientos.',
+        fullDescription: 'Gestionamos el traslado privado de colaboradores y ejecutivos mediante vehículos y vans adaptados a cada requerimiento. Somos especialistas en acercamientos habituales, traslados en distintos horarios y logística para eventos corporativos, planificando rutas eficientes para que tu operación avance sin contratiempos.',
         features: [
             {
                 title: 'Transporte corporativo',
@@ -70,10 +70,10 @@ export const services = [
     },
     {
         id: 'fletes-y-despachos-express',
-        label: 'Logística y distribución',
+        label: 'Logística y distribución B2B',
         title: 'Fletes',
         description: 'Carga, distribución de productos, mobiliario e insumos con puntualidad y respaldo.',
-        fullDescription: 'Ofrecemos servicios de fletes y despachos express mediante camionetas de carga tipo Mercedes-Benz Vito, operadas por personal calificado. Nuestro servicio se adapta a los requerimientos de cada empresa, considerando las dimensiones de la carga, las distancias y las necesidades particulares de cada traslado.',
+        fullDescription: 'Resolvemos el traslado de carga, insumos y mercadería de tu empresa con vehículos utilitarios y personal calificado. Nos adaptamos a los volúmenes, rutas y tiempos de cada operación para que tu equipo se enfoque en el core del negocio.',
         features: [
             {
                 title: 'Carga e insumos',
@@ -105,22 +105,26 @@ export const services = [
     },
     {
         id: 'catering',
-        label: 'Gastronomía corporativa',
+        label: 'Catering corporativo',
         title: 'Catering',
         description: 'Soluciones gastronómicas para reuniones, equipos de trabajo y jornadas corporativas.',
-        fullDescription: 'Ofrecemos soluciones flexibles de catering para empresas, adaptándonos a las características y requerimientos de cada actividad. Nuestros servicios contemplan la alimentación para reuniones, equipos de trabajo, jornadas laborales y eventos comerciales.',
+        fullDescription: 'Resolvemos la alimentación de tus equipos, reuniones y jornadas operativas con puntualidad, presentación impecable y abastecimiento continuo. Nos encargamos de la logística gastronómica para que tú te concentres en tus objetivos de negocio.',
         features: [
             {
-                title: 'Alimentación corporativa',
-                description: 'Almuerzos y cenas corporativas. Organización de asados.',
+                title: 'Coffee breaks y reuniones',
+                description: 'Montaje completo con insumos dulces, salados y bebestibles para capacitaciones, directorios y encuentros ejecutivos.',
             },
             {
-                title: 'Jornadas de trabajo',
-                description: 'Insumos para coffee break. Colaciones para jornadas de inventario.',
+                title: 'Jornadas operativas e inventarios',
+                description: 'Colaciones, desayunos y almuerzos en terreno diseñados para turnos extensos, cierres de tienda o jornadas de inventario.',
             },
             {
-                title: 'Eventos comerciales',
-                description: 'Servicios de alimentación para eventos comerciales. Cotizaciones personalizadas según los requerimientos del evento.',
+                title: 'Almuerzos, cenas y asados',
+                description: 'Servicios gastronómicos a medida para celebraciones internas, hitos de equipo y actividades de camaradería',
+            },
+            {
+                title: 'Abastecimiento y montaje integral',
+                description: 'Gestión de insumos, menaje, montaje y atención en el lugar, con propuestas adaptadas al número de asistentes.',
             },
         ],
         specifications: [],
@@ -132,10 +136,10 @@ export const services = [
     },
     {
         id: 'produccion-de-eventos',
-        label: 'Eventos corporativos',
+        label: 'Producción y logística de eventos',
         title: 'Producción de eventos',
         description: 'Organización y soporte logístico para eventos a pequeña, mediana y gran escala.',
-        fullDescription: 'Ofrecemos soluciones flexibles de producción de eventos para empresas, adaptándonos a las características y requerimientos de cada actividad. Organizamos y brindamos soporte logístico para eventos a pequeña, mediana y gran escala, incluyendo fiestas y celebraciones corporativas.',
+        fullDescription: 'Planificamos, coordinamos y ejecutamos eventos corporativos y comerciales de principio a fin. Asumimos toda la carga operativa, técnica y logística para garantizar experiencias memorables sin desgastar a tu equipo interno.',
         features: [
             {
                 title: 'Eventos y celebraciones',
