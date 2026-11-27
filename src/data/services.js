@@ -39,6 +39,36 @@ export const services = [
         detailImageAlt: 'Repartidor junto a su motocicleta entregando un paquete a un hombre frente a un edificio de oficinas.',
     },
     {
+        id: 'transporte-de-pasajeros',
+        label: 'Movilidad empresarial',
+        title: 'Transporte de pasajeros',
+        description: 'Traslados privados para colaboradores y ejecutivos, incluyendo rutas y acercamientos habituales.',
+        fullDescription: 'Brindamos servicios de transporte privado de pasajeros mediante vehículos y vans, seleccionados de acuerdo con los requerimientos del cliente y la cantidad de personas que necesitan trasladarse. Somos especialistas en el transporte de colaboradores para eventos comerciales en distintos horarios, incorporando la planificación de rutas para optimizar los desplazamientos.',
+        features: [
+            {
+                title: 'Transporte corporativo',
+                description: 'Transporte privado de pasajeros. Traslado de ejecutivos. Transporte de colaboradores.',
+            },
+            {
+                title: 'Eventos y planificación',
+                description: 'Traslados para eventos comerciales y corporativos. Planificación y optimización de rutas.',
+            },
+            {
+                title: 'Vehículos y vans',
+                description: 'Asignación de vehículos según la cantidad de pasajeros. Servicio de vans con tarifa fija dentro de la Región Metropolitana.',
+            },
+            {
+                title: 'Cotización del servicio',
+                description: 'Cotizaciones para vehículos según distancia, tiempos de traslado, autopistas y tiempos de espera.',
+            },
+        ],
+        specifications: [],
+        image: '/images/our-services/transporte-pasajeros.webp',
+        imageAlt: 'Pasajeros utilizando un servicio de transporte privado frente a un edificio corporativo.',
+        detailImage: '/images/service-details/transporte-privado-ejecutivos-colaboradores.webp',
+        detailImageAlt: 'Conductor recibiendo a dos pasajeros junto a la puerta abierta de una van.',
+    },
+    {
         id: 'fletes-y-despachos-express',
         label: 'Logística y distribución',
         title: 'Fletes',
@@ -72,36 +102,6 @@ export const services = [
         imageAlt: 'Personal realizando la carga de productos y mobiliario en un vehículo de transporte.',
         detailImage: '/images/service-details/transporte-carga-logistica-empresarial.webp',
         detailImageAlt: 'Dos trabajadores trasladando cajas entre un carro de carga y un furgón frente a un edificio de oficinas.',
-    },
-    {
-        id: 'transporte-de-pasajeros',
-        label: 'Movilidad empresarial',
-        title: 'Transporte de pasajeros',
-        description: 'Traslados privados para colaboradores y ejecutivos, incluyendo rutas y acercamientos habituales.',
-        fullDescription: 'Brindamos servicios de transporte privado de pasajeros mediante vehículos y vans, seleccionados de acuerdo con los requerimientos del cliente y la cantidad de personas que necesitan trasladarse. Somos especialistas en el transporte de colaboradores para eventos comerciales en distintos horarios, incorporando la planificación de rutas para optimizar los desplazamientos.',
-        features: [
-            {
-                title: 'Transporte corporativo',
-                description: 'Transporte privado de pasajeros. Traslado de ejecutivos. Transporte de colaboradores.',
-            },
-            {
-                title: 'Eventos y planificación',
-                description: 'Traslados para eventos comerciales y corporativos. Planificación y optimización de rutas.',
-            },
-            {
-                title: 'Vehículos y vans',
-                description: 'Asignación de vehículos según la cantidad de pasajeros. Servicio de vans con tarifa fija dentro de la Región Metropolitana.',
-            },
-            {
-                title: 'Cotización del servicio',
-                description: 'Cotizaciones para vehículos según distancia, tiempos de traslado, autopistas y tiempos de espera.',
-            },
-        ],
-        specifications: [],
-        image: '/images/our-services/transporte-pasajeros.webp',
-        imageAlt: 'Pasajeros utilizando un servicio de transporte privado frente a un edificio corporativo.',
-        detailImage: '/images/service-details/transporte-privado-ejecutivos-colaboradores.webp',
-        detailImageAlt: 'Conductor recibiendo a dos pasajeros junto a la puerta abierta de una van.',
     },
     {
         id: 'catering',
