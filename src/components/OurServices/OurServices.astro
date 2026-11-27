@@ -14,7 +14,7 @@ import { services } from '../../data/services.js';
             {services.map((service) => (
                 <article class="our-services-card">
                     {/* Fotografía provisional: validar antes de publicar. */}
-                    <img class="our-services-image" src={service.image} alt={service.title} width="1200" height="675" loading="lazy" />
+                    <img class="our-services-image" src={service.image} alt={service.imageAlt} width="1200" height="675" loading="lazy" />
 
                     <div class="our-services-content">
                         <h3 class="our-services-card-title">{service.title}</h3>

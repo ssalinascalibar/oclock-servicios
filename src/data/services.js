@@ -2,8 +2,8 @@ export const services = [
     {
         id: 'mensajeria-y-despachos-express',
         label: 'LOGÍSTICA URBANA Y MENSAJERÍA',
-        title: 'Mensajería y despachos express',
-        description: 'Servicios de mensajería, trámites y despachos express para empresas.',
+        title: 'Mensajería',
+        description: 'Envíos ágiles, trámites y gestiones corporativas con seguimiento oportuno.',
         fullDescription: 'Nuestro servicio de mensajería y despachos express está orientado a resolver las necesidades operativas y administrativas de las empresas. Contamos con personal calificado que realiza gestiones, trámites y entregas en motocicleta, facilitando las actividades diarias de nuestros clientes y el traslado de productos y documentación.',
         features: [
             {
@@ -41,8 +41,8 @@ export const services = [
     {
         id: 'fletes-y-despachos-express',
         label: 'Logística y distribución',
-        title: 'Fletes y despachos express',
-        description: 'Soluciones de transporte de carga, productos, mobiliario e insumos para empresas.',
+        title: 'Fletes',
+        description: 'Carga, distribución de productos, mobiliario e insumos con puntualidad y respaldo.',
         fullDescription: 'Ofrecemos servicios de fletes y despachos express mediante camionetas de carga tipo Mercedes-Benz Vito, operadas por personal calificado. Nuestro servicio se adapta a los requerimientos de cada empresa, considerando las dimensiones de la carga, las distancias y las necesidades particulares de cada traslado.',
         features: [
             {
@@ -77,7 +77,7 @@ export const services = [
         id: 'transporte-de-pasajeros',
         label: 'Movilidad empresarial',
         title: 'Transporte de pasajeros',
-        description: 'Transporte privado de ejecutivos y colaboradores, adaptado a las necesidades de cada empresa.',
+        description: 'Traslados privados para colaboradores y ejecutivos, incluyendo rutas y acercamientos habituales.',
         fullDescription: 'Brindamos servicios de transporte privado de pasajeros mediante vehículos y vans, seleccionados de acuerdo con los requerimientos del cliente y la cantidad de personas que necesitan trasladarse. Somos especialistas en el transporte de colaboradores para eventos comerciales en distintos horarios, incorporando la planificación de rutas para optimizar los desplazamientos.',
         features: [
             {
@@ -104,16 +104,12 @@ export const services = [
         detailImageAlt: 'Conductor recibiendo a dos pasajeros junto a la puerta abierta de una van.',
     },
     {
-        id: 'catering-y-produccion-de-eventos',
-        label: 'Experiencias corporativas',
-        title: 'Catering y producción de eventos',
-        description: 'Servicios de alimentación y producción de eventos adaptados a las necesidades de tu empresa.',
-        fullDescription: 'Ofrecemos soluciones flexibles de catering y producción de eventos para empresas, adaptándonos a las características y requerimientos de cada actividad. Nuestros servicios contemplan desde la alimentación para reuniones y jornadas laborales hasta la realización de grandes eventos y celebraciones corporativas.',
+        id: 'catering',
+        label: 'Gastronomía corporativa',
+        title: 'Catering',
+        description: 'Soluciones gastronómicas para reuniones, equipos de trabajo y jornadas corporativas.',
+        fullDescription: 'Ofrecemos soluciones flexibles de catering para empresas, adaptándonos a las características y requerimientos de cada actividad. Nuestros servicios contemplan la alimentación para reuniones, equipos de trabajo, jornadas laborales y eventos comerciales.',
         features: [
-            {
-                title: 'Eventos y celebraciones',
-                description: 'Producción de eventos corporativos. Fiestas y celebraciones empresariales.',
-            },
             {
                 title: 'Alimentación corporativa',
                 description: 'Almuerzos y cenas corporativas. Organización de asados.',
@@ -128,6 +124,34 @@ export const services = [
             },
         ],
         specifications: [],
+        // Fotografías provisionales compartidas con Producción de eventos.
+        image: '/images/our-services/catering-produccion-eventos.webp',
+        imageAlt: 'Montaje de mesas y espacios de alimentación para un evento corporativo al aire libre.',
+        detailImage: '/images/service-details/catering-eventos-corporativos.webp',
+        detailImageAlt: 'Personal de catering preparando una mesa de bocados mientras los asistentes conversan en una terraza.',
+    },
+    {
+        id: 'produccion-de-eventos',
+        label: 'Eventos corporativos',
+        title: 'Producción de eventos',
+        description: 'Organización y soporte logístico para eventos a pequeña, mediana y gran escala.',
+        fullDescription: 'Ofrecemos soluciones flexibles de producción de eventos para empresas, adaptándonos a las características y requerimientos de cada actividad. Organizamos y brindamos soporte logístico para eventos a pequeña, mediana y gran escala, incluyendo fiestas y celebraciones corporativas.',
+        features: [
+            {
+                title: 'Eventos y celebraciones',
+                description: 'Producción de eventos corporativos. Fiestas y celebraciones empresariales.',
+            },
+            {
+                title: 'Organización y soporte logístico',
+                description: 'Organización y soporte logístico para eventos a pequeña, mediana y gran escala.',
+            },
+            {
+                title: 'Cotización del servicio',
+                description: 'Cotizaciones personalizadas según los requerimientos del evento.',
+            },
+        ],
+        specifications: [],
+        // Fotografías provisionales compartidas con Catering.
         image: '/images/our-services/catering-produccion-eventos.webp',
         imageAlt: 'Montaje de mesas y espacios de alimentación para un evento corporativo al aire libre.',
         detailImage: '/images/service-details/catering-eventos-corporativos.webp',
