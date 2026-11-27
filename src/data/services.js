@@ -1,7 +1,7 @@
 export const services = [
     {
         id: 'mensajeria-y-despachos-express',
-        label: 'Mensajería corporativa',
+        label: 'LOGÍSTICA URBANA Y MENSAJERÍA',
         title: 'Mensajería y despachos express',
         description: 'Servicios de mensajería, trámites y despachos express para empresas.',
         fullDescription: 'Nuestro servicio de mensajería y despachos express está orientado a resolver las necesidades operativas y administrativas de las empresas. Contamos con personal calificado que realiza gestiones, trámites y entregas en motocicleta, facilitando las actividades diarias de nuestros clientes y el traslado de productos y documentación.',
